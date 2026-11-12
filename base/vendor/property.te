@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+vendor_internal_prop(vendor_sprd_modules_ready_prop)
+vendor_internal_prop(vendor_sprd_modem_prop)

@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+hal_attribute(sprd_enhance)
+hal_attribute(sprd_wcn)
+hal_attribute(sprd_trusty)
+hal_attribute(sprd_network)
+hal_attribute(sprd_log)
+hal_attribute(sprd_cplog)
+hal_attribute(sprd_tui)
+hal_attribute(sprd_soter)

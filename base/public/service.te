@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_hal_sprd_enhance_service, hal_service_type, protected_service, service_manager_type, vendor_service;
+type vendor_hal_sprd_wcn_service, hal_service_type, protected_service, service_manager_type, vendor_service;
+type vendor_hal_sprd_trusty_service, hal_service_type, protected_service, service_manager_type, vendor_service;
+type vendor_hal_sprd_network_service, hal_service_type, protected_service, service_manager_type, vendor_service;
+type vendor_hal_sprd_log_service, hal_service_type, protected_service, service_manager_type, vendor_service;
+type vendor_hal_sprd_cplog_service, hal_service_type, protected_service, service_manager_type, vendor_service;
+type vendor_hal_sprd_tui_service, hal_service_type, protected_service, service_manager_type, vendor_service;
+type vendor_hal_sprd_soter_service, hal_service_type, protected_service, service_manager_type, vendor_service;
+type vendor_hal_sprd_radio_service, hal_service_type, protected_service, service_manager_type, vendor_service;

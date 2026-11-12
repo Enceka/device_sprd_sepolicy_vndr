@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# Stock init rc explicitly selects the platform tee domain for these helpers.
+allow tee self:global_capability_class_set { setuid setgid };
+allow tee block_device:dir search;
+allow tee vendor_sprd_rpmb_device:chr_file rw_file_perms;
+allow tee vendor_sprd_rpmb_device:blk_file rw_file_perms;
+allow hal_identity_default tee_device:chr_file rw_file_perms;

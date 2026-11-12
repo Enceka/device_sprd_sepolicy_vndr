@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+hal_client_domain(system_server, hal_sprd_network)
+hal_client_domain(system_server, hal_sprd_log)
+hal_client_domain(system_server, hal_sprd_trusty)
+hal_client_domain(radio, hal_telephony)
+get_prop(radio, vendor_sprd_radio_prop)
+get_prop(audioserver, vendor_sprd_audio_prop)
+get_prop(cameraserver, vendor_sprd_camera_prop)
+get_prop(surfaceflinger, vendor_sprd_graphics_prop)
+get_prop(bootanim, vendor_sprd_graphics_prop)

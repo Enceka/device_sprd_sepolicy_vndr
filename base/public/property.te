@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# Properties read by framework-side HAL clients must be part of the exported API.
+vendor_restricted_prop(vendor_sprd_radio_prop)
+vendor_restricted_prop(vendor_sprd_power_prop)
+vendor_restricted_prop(vendor_sprd_camera_prop)
+vendor_restricted_prop(vendor_sprd_audio_prop)
+vendor_restricted_prop(vendor_sprd_graphics_prop)
+vendor_restricted_prop(vendor_sprd_wcn_prop)
+vendor_restricted_prop(vendor_sprd_log_prop)

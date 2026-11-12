@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+hal_client_domain(hal_audio_default, hal_power)
+get_prop(hal_audio_default, vendor_sprd_audio_prop)

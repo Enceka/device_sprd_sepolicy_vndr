@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_uniber, domain;
+type vendor_sprd_uniber_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_sprd_uniber)
+allow vendor_sprd_uniber proc_interrupts:file r_file_perms;
+# IRQ affinity writes must be labeled individually by the board.

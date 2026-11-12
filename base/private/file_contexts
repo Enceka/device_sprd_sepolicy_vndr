@@ -1,0 +1,4 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+/system_ext/bin/data_rps\.sh u:object_r:sprd_data_rps_exec:s0

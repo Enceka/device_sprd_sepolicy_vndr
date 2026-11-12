@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_modem_control, domain;
+type vendor_sprd_modem_control_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_sprd_modem_control)
+allow vendor_sprd_modem_control vendor_sprd_modem_device:chr_file rw_file_perms;
+allow vendor_sprd_modem_control block_device:dir search;
+allow vendor_sprd_modem_control vendor_sprd_modem_block_device:blk_file r_file_perms;
+allow vendor_sprd_modem_control self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+set_prop(vendor_sprd_modem_control, vendor_sprd_modem_prop)

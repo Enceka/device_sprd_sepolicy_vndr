@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_charged, domain;
+type vendor_sprd_charged_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_sprd_charged)
+r_dir_file(vendor_sprd_charged, sysfs_batteryinfo)
+allow vendor_sprd_charged vendor_sprd_battery_data_file:dir create_dir_perms;
+allow vendor_sprd_charged vendor_sprd_battery_data_file:file create_file_perms;
+allow vendor_sprd_charged block_device:dir search;
+allow vendor_sprd_charged vendor_sprd_miscdata_block_device:blk_file rw_file_perms;
+allow vendor_sprd_charged self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;

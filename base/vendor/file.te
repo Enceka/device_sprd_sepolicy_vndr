@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_enhance_data_file, file_type, data_file_type;
+type vendor_sprd_gnss_data_file, file_type, data_file_type;
+type vendor_sprd_wcn_data_file, file_type, data_file_type;
+type vendor_sprd_battery_data_file, file_type, data_file_type;
+type vendor_sprd_modem_data_file, file_type, data_file_type;
+type vendor_sprd_drm_data_file, file_type, data_file_type;
+type vendor_sprd_sysfs_display, fs_type, sysfs_type;
+type vendor_sprd_sysfs_panel, fs_type, sysfs_type;
+type vendor_sprd_sysfs_scene, fs_type, sysfs_type;
+type vendor_sprd_sysfs_cpuidle, fs_type, sysfs_type;
+type vendor_sprd_proc_walt, fs_type, proc_type;
+type vendor_sprd_debugfs_mali, debugfs_type, fs_type;

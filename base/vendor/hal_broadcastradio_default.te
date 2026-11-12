@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+hal_client_domain(hal_broadcastradio_default, hal_sprd_wcn)
+allow hal_broadcastradio_default vendor_sprd_fm_device:chr_file rw_file_perms;
+allow hal_broadcastradio_default vendor_sprd_wcnd_socket:sock_file write;
+allow hal_broadcastradio_default vendor_sprd_connmgr:unix_stream_socket connectto;

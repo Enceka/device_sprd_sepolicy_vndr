@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+vendor.sprd.hardware.boot::IBootControl            u:object_r:hal_bootctl_hwservice:s0
+vendor.sprd.hardware.power::IPower                u:object_r:hal_power_hwservice:s0
+vendor.sprd.hardware.radio::IExtRadio              u:object_r:hal_telephony_hwservice:s0
+vendor.sprd.hardware.radio.lite::ILiteRadio         u:object_r:hal_telephony_hwservice:s0
+vendor.sprd.hardware.radio.ims::IImsRadio           u:object_r:hal_telephony_hwservice:s0
+vendor.sprd.hardware.gnss::IUnisocGnss              u:object_r:hal_gnss_hwservice:s0
+vendor.sprd.hardware.thermal::IExtThermal           u:object_r:hal_thermal_hwservice:s0
+vendor.sprd.hardware.log::ILogControl              u:object_r:vendor_hal_sprd_log_hwservice:s0
+vendor.sprd.hardware.network::INetworkControl      u:object_r:vendor_hal_sprd_network_hwservice:s0
+vendor.sprd.hardware.trusty::ITrustyClientProvider  u:object_r:vendor_hal_sprd_trusty_hwservice:s0
+vendor.sprd.hardware.connmgr::IConnmgr             u:object_r:vendor_hal_sprd_wcn_hwservice:s0
+vendor.sprd.hardware.wcn::IWcnVendorInterface      u:object_r:vendor_hal_sprd_wcn_hwservice:s0
+vendor.sprd.hardware.tui::ITui                     u:object_r:vendor_hal_sprd_tui_hwservice:s0
+vendor.sprd.hardware.soter::ISoter                 u:object_r:vendor_hal_sprd_soter_hwservice:s0

@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_modprobe_exec, exec_type, vendor_file_type, file_type;
+domain_auto_trans(init, vendor_sprd_modprobe_exec, vendor_modprobe)
+allow vendor_modprobe vendor_shell_exec:file rx_file_perms;
+allow vendor_modprobe vendor_toolbox_exec:file rx_file_perms;
+set_prop(vendor_modprobe, vendor_sprd_modules_ready_prop)

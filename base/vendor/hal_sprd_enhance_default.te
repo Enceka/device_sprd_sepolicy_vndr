@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_hal_sprd_enhance_default, domain;
+type vendor_hal_sprd_enhance_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_sprd_enhance_default)
+hal_server_domain(vendor_hal_sprd_enhance_default, hal_sprd_enhance)
+binder_use(vendor_hal_sprd_enhance_default)
+hwbinder_use(vendor_hal_sprd_enhance_default)
+allow vendor_hal_sprd_enhance_default vendor_sprd_sysfs_display:dir search;
+allow vendor_hal_sprd_enhance_default vendor_sprd_sysfs_display:file rw_file_perms;
+r_dir_file(vendor_hal_sprd_enhance_default, vendor_sprd_sysfs_panel)
+allow vendor_hal_sprd_enhance_default vendor_sprd_enhance_data_file:dir r_dir_perms;
+allow vendor_hal_sprd_enhance_default vendor_sprd_enhance_data_file:file r_file_perms;

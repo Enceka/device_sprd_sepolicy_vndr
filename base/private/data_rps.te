@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type sprd_data_rps, domain, coredomain;
+type sprd_data_rps_exec, exec_type, system_file_type, file_type;
+init_daemon_domain(sprd_data_rps)
+allow sprd_data_rps shell_exec:file rx_file_perms;
+allow sprd_data_rps toolbox_exec:file rx_file_perms;
+# Network tuning permissions depend on the actual shipped script.

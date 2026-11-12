@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_slogmodem_vendor, domain;
+type vendor_sprd_slogmodem_vendor_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_sprd_slogmodem_vendor)
+allow vendor_sprd_slogmodem_vendor vendor_sprd_diag_device:chr_file r_file_perms;
+allow vendor_sprd_slogmodem_vendor vendor_sprd_modem_data_file:dir create_dir_perms;
+allow vendor_sprd_slogmodem_vendor vendor_sprd_modem_data_file:file create_file_perms;
+allow vendor_sprd_slogmodem_vendor vendor_yloglite_data_file:dir create_dir_perms;
+allow vendor_sprd_slogmodem_vendor vendor_yloglite_data_file:file create_file_perms;
+get_prop(vendor_sprd_slogmodem_vendor, vendor_sprd_modem_prop)
+get_prop(vendor_sprd_slogmodem_vendor, vendor_sprd_log_prop)

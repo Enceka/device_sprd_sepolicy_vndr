@@ -1,0 +1,64 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+hal_attribute_service(hal_sprd_enhance, vendor_hal_sprd_enhance_service)
+
+binder_call(hal_sprd_enhance_client, hal_sprd_enhance_server)
+
+binder_call(hal_sprd_enhance_server, hal_sprd_enhance_client)
+
+hal_attribute_hwservice(hal_sprd_wcn, vendor_hal_sprd_wcn_hwservice)
+
+hal_attribute_service(hal_sprd_wcn, vendor_hal_sprd_wcn_service)
+
+binder_call(hal_sprd_wcn_client, hal_sprd_wcn_server)
+
+binder_call(hal_sprd_wcn_server, hal_sprd_wcn_client)
+
+hal_attribute_hwservice(hal_sprd_trusty, vendor_hal_sprd_trusty_hwservice)
+
+hal_attribute_service(hal_sprd_trusty, vendor_hal_sprd_trusty_service)
+
+binder_call(hal_sprd_trusty_client, hal_sprd_trusty_server)
+
+binder_call(hal_sprd_trusty_server, hal_sprd_trusty_client)
+
+hal_attribute_hwservice(hal_sprd_network, vendor_hal_sprd_network_hwservice)
+
+hal_attribute_service(hal_sprd_network, vendor_hal_sprd_network_service)
+
+binder_call(hal_sprd_network_client, hal_sprd_network_server)
+
+binder_call(hal_sprd_network_server, hal_sprd_network_client)
+
+hal_attribute_hwservice(hal_sprd_log, vendor_hal_sprd_log_hwservice)
+
+hal_attribute_service(hal_sprd_log, vendor_hal_sprd_log_service)
+
+binder_call(hal_sprd_log_client, hal_sprd_log_server)
+
+binder_call(hal_sprd_log_server, hal_sprd_log_client)
+
+hal_attribute_service(hal_sprd_cplog, vendor_hal_sprd_cplog_service)
+
+binder_call(hal_sprd_cplog_client, hal_sprd_cplog_server)
+
+binder_call(hal_sprd_cplog_server, hal_sprd_cplog_client)
+
+hal_attribute_hwservice(hal_sprd_tui, vendor_hal_sprd_tui_hwservice)
+
+hal_attribute_service(hal_sprd_tui, vendor_hal_sprd_tui_service)
+
+binder_call(hal_sprd_tui_client, hal_sprd_tui_server)
+
+binder_call(hal_sprd_tui_server, hal_sprd_tui_client)
+
+hal_attribute_hwservice(hal_sprd_soter, vendor_hal_sprd_soter_hwservice)
+
+hal_attribute_service(hal_sprd_soter, vendor_hal_sprd_soter_service)
+
+binder_call(hal_sprd_soter_client, hal_sprd_soter_server)
+
+binder_call(hal_sprd_soter_server, hal_sprd_soter_client)
+
+hal_attribute_service(hal_telephony, vendor_hal_sprd_radio_service)

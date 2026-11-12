@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+persist.vendor.radio.              u:object_r:vendor_sprd_radio_prop:s0 prefix string
+ro.vendor.modem.                   u:object_r:vendor_sprd_radio_prop:s0 prefix string
+ro.vendor.radio.                   u:object_r:vendor_sprd_radio_prop:s0 prefix string
+vendor.radio.                      u:object_r:vendor_sprd_radio_prop:s0 prefix string
+vendor.ril.                        u:object_r:vendor_sprd_radio_prop:s0 prefix string
+vendor.sim.                        u:object_r:vendor_sprd_radio_prop:s0 prefix string
+vendor.data.                       u:object_r:vendor_sprd_radio_prop:s0 prefix string
+vendor.net.                        u:object_r:vendor_sprd_radio_prop:s0 prefix string
+persist.vendor.modem.              u:object_r:vendor_sprd_modem_prop:s0 prefix string
+vendor.modem.                      u:object_r:vendor_sprd_modem_prop:s0 prefix string
+persist.vendor.power.              u:object_r:vendor_sprd_power_prop:s0 prefix string
+vendor.cam.                        u:object_r:vendor_sprd_camera_prop:s0 prefix string
+ro.vendor.cam.                     u:object_r:vendor_sprd_camera_prop:s0 prefix string
+persist.vendor.cam.                u:object_r:vendor_sprd_camera_prop:s0 prefix string
+ro.vendor.audio.                   u:object_r:vendor_sprd_audio_prop:s0 prefix string
+persist.vendor.audio.              u:object_r:vendor_sprd_audio_prop:s0 prefix string
+vendor.audio.                      u:object_r:vendor_sprd_audio_prop:s0 prefix string
+ro.vendor.af.                      u:object_r:vendor_sprd_audio_prop:s0 prefix string
+vendor.hwc.                        u:object_r:vendor_sprd_graphics_prop:s0 prefix string
+vendor.mali.                       u:object_r:vendor_sprd_graphics_prop:s0 prefix string
+ro.vendor.gpu.                     u:object_r:vendor_sprd_graphics_prop:s0 prefix string
+ro.vendor.arm.                     u:object_r:vendor_sprd_graphics_prop:s0 prefix string
+ro.vendor.sf.                      u:object_r:vendor_sprd_graphics_prop:s0 prefix string
+ro.vendor.hwui.                    u:object_r:vendor_sprd_graphics_prop:s0 prefix string
+vendor.bluetooth.                  u:object_r:vendor_sprd_wcn_prop:s0 prefix string
+persist.vendor.wcnd.               u:object_r:vendor_sprd_wcn_prop:s0 prefix string
+persist.vendor.ylog_lite.          u:object_r:vendor_sprd_log_prop:s0 prefix string
+vendor.ylog_lite.                  u:object_r:vendor_sprd_log_prop:s0 prefix string
+vendor.all.modules.ready           u:object_r:vendor_sprd_modules_ready_prop:s0 exact bool

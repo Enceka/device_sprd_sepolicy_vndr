@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# Standard gpu_device / tee_device / video_device labels are reused where their
+# existing platform permissions describe the interface.
+type vendor_sprd_modem_device, dev_type;
+type vendor_sprd_spipe_device, dev_type;
+type vendor_sprd_wcn_device, dev_type;
+type vendor_sprd_fm_device, dev_type;
+type vendor_sprd_jpeg_device, dev_type;
+type vendor_sprd_diag_device, dev_type;
+type vendor_sprd_miscdata_block_device, dev_type;
+type vendor_sprd_modem_block_device, dev_type;
+type vendor_sprd_rpmb_device, dev_type;

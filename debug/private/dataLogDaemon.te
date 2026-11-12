@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type sprd_data_log, domain, coredomain;
+type sprd_data_log_exec, exec_type, system_file_type, file_type;
+init_daemon_domain(sprd_data_log)
+unix_socket_connect(sprd_data_log, logdr, logd)

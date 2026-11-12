@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+vendor.unisoc.hardware.power.IVendorPower/default u:object_r:hal_power_service:s0
+vendor.sprd.hardware.enhance.IEnhance/default u:object_r:vendor_hal_sprd_enhance_service:s0
+vendor.sprd.hardware.log.ILogControl/default u:object_r:vendor_hal_sprd_log_service:s0
+vendor.sprd.hardware.network.INetworkControl/default u:object_r:vendor_hal_sprd_network_service:s0
+vendor.sprd.hardware.trusty.ITrustyClientProvider/default u:object_r:vendor_hal_sprd_trusty_service:s0
+vendor.sprd.hardware.cplog_svc.ILogTransportInductor/default u:object_r:vendor_hal_sprd_cplog_service:s0
+vendor.sprd.hardware.cplog_svc.ISysLogControl/default u:object_r:vendor_hal_sprd_cplog_service:s0
+vendor.sprd.hardware.tui.ITui/default u:object_r:vendor_hal_sprd_tui_service:s0
+vendor.sprd.hardware.soter.ISoter/default u:object_r:vendor_hal_sprd_soter_service:s0
+vendor.unisoc.hardware.radio.modem.IExtRadioModem/slot1 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.modem.IExtRadioModem/slot2 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.sim.IExtRadioSim/slot1 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.sim.IExtRadioSim/slot2 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.network.IExtRadioNetwork/slot1 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.network.IExtRadioNetwork/slot2 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.data.IExtRadioData/slot1 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.data.IExtRadioData/slot2 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.voice.IExtRadioVoice/slot1 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.voice.IExtRadioVoice/slot2 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.messaging.IExtRadioMessaging/slot1 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.messaging.IExtRadioMessaging/slot2 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.ims.IImsRadio/slot1 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.ims.IImsRadio/slot2 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.lite.ILiteRadio/liteservice1 u:object_r:vendor_hal_sprd_radio_service:s0
+vendor.unisoc.hardware.radio.lite.ILiteRadio/liteservice2 u:object_r:vendor_hal_sprd_radio_service:s0

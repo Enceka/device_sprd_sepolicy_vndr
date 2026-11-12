@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_refnotify, domain;
+type vendor_sprd_refnotify_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_sprd_refnotify)
+allow vendor_sprd_refnotify rtc_device:chr_file rw_file_perms;

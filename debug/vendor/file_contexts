@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+/(vendor|system/vendor)/bin/engpc u:object_r:vendor_sprd_engpc_exec:s0
+/(vendor|system/vendor)/bin/dcxsrv u:object_r:vendor_sprd_dcxsrv_exec:s0
+/(vendor|system/vendor)/bin/srtd u:object_r:vendor_sprd_srtd_exec:s0
+/(vendor|system/vendor)/bin/systemDebuggerd u:object_r:vendor_sprd_systemDebuggerd_exec:s0

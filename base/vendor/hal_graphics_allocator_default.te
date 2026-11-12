@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+get_prop(hal_graphics_allocator_default, vendor_sprd_graphics_prop)
+# Imported gralloc buffers are shared across app MLS categories, as in stock.
+typeattribute hal_graphics_allocator_default_tmpfs mlstrustedobject;
+# Stock gralloc exports ashmem buffers to framework and vendor clients.
+allow { hal_graphics_allocator_client hal_graphics_composer hal_codec2 hal_camera }
+    hal_graphics_allocator_default_tmpfs:file { getattr read write map };
+# These platform domains are public API; the vendor tmpfs type stays in vendor.
+allow { surfaceflinger system_server bootanim }
+    hal_graphics_allocator_default_tmpfs:file { getattr read write map };

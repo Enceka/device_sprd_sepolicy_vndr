@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+genfscon proc /sys/walt u:object_r:vendor_sprd_proc_walt:s0
+genfscon sysfs /devices/platform/charger-manager/power_supply u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/backlight/backlight u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/sprd_backlight/backlight u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd-governor u:object_r:vendor_sprd_sysfs_scene:s0
+genfscon debugfs /mali0 u:object_r:vendor_sprd_debugfs_mali:s0

@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_hal_sprd_log_default, domain;
+type vendor_hal_sprd_log_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_sprd_log_default)
+hal_server_domain(vendor_hal_sprd_log_default, hal_sprd_log)
+binder_use(vendor_hal_sprd_log_default)
+hwbinder_use(vendor_hal_sprd_log_default)
+get_prop(vendor_hal_sprd_log_default, vendor_sprd_log_prop)
+unix_socket_connect(vendor_hal_sprd_log_default, logdr, logd)

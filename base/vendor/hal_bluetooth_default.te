@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+hal_client_domain(hal_bluetooth_default, hal_sprd_wcn)
+allow hal_bluetooth_default vendor_sprd_wcn_device:chr_file rw_file_perms;
+allow hal_bluetooth_default vendor_sprd_wcnd_socket:sock_file write;
+allow hal_bluetooth_default vendor_sprd_connmgr:unix_stream_socket connectto;
+get_prop(hal_bluetooth_default, vendor_sprd_wcn_prop)

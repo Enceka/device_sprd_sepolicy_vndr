@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.sprd                           u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.lights-service                            u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.memtrack-service\.sprd                         u:object_r:hal_memtrack_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.memtrack-service                          u:object_r:hal_memtrack_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.unisoc\.hardware\.power-service                           u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.power@4\.0-service                        u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.boot@1\.2-service                         u:object_r:hal_bootctl_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.[01]-service\.unisoc(-lazy)?      u:object_r:hal_bluetooth_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software              u:object_r:hal_gatekeeper_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.identity-service\.trusty                       u:object_r:hal_identity_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.vibrator-service                          u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.oemlock-service                           u:object_r:hal_oemlock_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.gnss@2\.2-service                         u:object_r:hal_gnss_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.thermal@2\.0-service                      u:object_r:hal_thermal_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.broadcastradio@2\.0-service               u:object_r:hal_broadcastradio_default_exec:s0
+/(vendor|system/vendor)/bin/hw/urild                                                             u:object_r:hal_radio_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.media\.c2@1\.1-unisoc-service                  u:object_r:vendor_hal_sprd_codec2_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm-service(-lazy)?\.widevine                  u:object_r:vendor_hal_sprd_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.enhance-service                           u:object_r:vendor_hal_sprd_enhance_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.wcn@1\.0-service                          u:object_r:vendor_hal_sprd_wcn_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.connmgr@1\.0-service                      u:object_r:vendor_hal_sprd_wcn_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.trusty-service                            u:object_r:vendor_hal_sprd_trusty_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.trusty@1\.0-service                       u:object_r:vendor_hal_sprd_trusty_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.network-service                           u:object_r:vendor_hal_sprd_network_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.network@1\.0-service                      u:object_r:vendor_hal_sprd_network_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.log-service                               u:object_r:vendor_hal_sprd_log_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.log@1\.0-service                          u:object_r:vendor_hal_sprd_log_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.cplog_svc-service                         u:object_r:vendor_hal_sprd_cplog_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.tui-service                               u:object_r:vendor_hal_sprd_tui_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.soter-service                             u:object_r:vendor_hal_sprd_soter_default_exec:s0
+/(vendor|system/vendor)/bin/modem_control                                                        u:object_r:vendor_sprd_modem_control_exec:s0
+/(vendor|system/vendor)/bin/cp_diskserver                                                        u:object_r:vendor_sprd_cp_diskserver_exec:s0
+/(vendor|system/vendor)/bin/gpsd                                                                 u:object_r:vendor_sprd_gpsd_exec:s0
+/(vendor|system/vendor)/bin/connmgr                                                              u:object_r:vendor_sprd_connmgr_exec:s0
+/(vendor|system/vendor)/bin/charged                                                              u:object_r:vendor_sprd_charged_exec:s0
+/(vendor|system/vendor)/bin/thermald                                                             u:object_r:vendor_sprd_thermald_exec:s0
+/(vendor|system/vendor)/bin/phasecheckserver                                                     u:object_r:vendor_sprd_phasecheckserver_exec:s0
+/(vendor|system/vendor)/bin/refnotify                                                            u:object_r:vendor_sprd_refnotify_exec:s0
+/(vendor|system/vendor)/bin/uniber                                                               u:object_r:vendor_sprd_uniber_exec:s0
+/(vendor|system/vendor)/bin/slogmodem_vendor                                                     u:object_r:vendor_sprd_slogmodem_vendor_exec:s0
+/(vendor|system/vendor)/bin/(tee_rpc|rpmbserver|tsupplicant|sprdstorageproxyd)                   u:object_r:tee_exec:s0
+/(vendor|system/vendor)/bin/yloglite                                                             u:object_r:vendor_yloglite_exec:s0
+/(vendor|system/vendor)/bin/init\.insmod\.sh                                                     u:object_r:vendor_sprd_modprobe_exec:s0
+
+# Kernel device nodes: label the underlying inode, not only a symlink.
+/dev/mali[0-9]+                                                                                  u:object_r:gpu_device:s0
+/dev/dri/card[0-9]+                                                                              u:object_r:gpu_device:s0
+/dev/dri/renderD[0-9]+                                                                           u:object_r:gpu_device:s0
+/dev/trusty-ipc-dev[0-9]+                                                                        u:object_r:tee_device:s0
+/dev/(tshm|tui_dev)                                                                              u:object_r:tee_device:s0
+/dev/(modem|phycp|pmsys|chsys|mdm_ctrl|cp_dump)                                                  u:object_r:vendor_sprd_modem_device:s0
+/dev/(spipe_(w|nr|lte|wcn)[0-9]+|snv_(nr|lte)|sctl_(pm|ch)|stime_(pm|ch))                        u:object_r:vendor_sprd_spipe_device:s0
+/dev/(stty_(w|nr|td|lte)[0-9]+|ttyBT[0-9]+)                                                      u:object_r:radio_device:s0
+/dev/(sttybt[0-9]+|gnss_dbg|gnss_download|gnss_pmnotify_ctl)                                     u:object_r:vendor_sprd_wcn_device:s0
+/dev/fm                                                                                          u:object_r:vendor_sprd_fm_device:s0
+/dev/(sprd_vsp|vpu_enc[0-9]+|vdma)                                                               u:object_r:video_device:s0
+/dev/sprd_jpg                                                                                    u:object_r:vendor_sprd_jpeg_device:s0
+/dev/gsp                                                                                         u:object_r:graphics_device:s0
+/dev/(sdiag_nr|slog_(w|nr|pm|ch|lte|phy)|iq_mem|wcn_gnss_dump)                                   u:object_r:vendor_sprd_diag_device:s0
+/dev/(block/)?mmcblk[0-9]+rpmb                                                                  u:object_r:vendor_sprd_rpmb_device:s0
+/dev/rpmb[0-9]+                                                                                  u:object_r:vendor_sprd_rpmb_device:s0
+/dev/block/(by-name|platform/.+/by-name)/misc u:object_r:misc_block_device:s0
+/dev/block/(by-name|platform/.+/by-name)/miscdata u:object_r:vendor_sprd_miscdata_block_device:s0
+/dev/block/(by-name|platform/.+/by-name)/(nr_(modem|phy|fixnv[12]|runtimenv[12]|deltanv)|pm_sys|ch_sys|l_agdsp)(_[ab])? u:object_r:vendor_sprd_modem_block_device:s0
+
+# Persistent vendor state and dedicated vendor mount points.
+/data/vendor/ylog(/.*)?                                                                          u:object_r:vendor_yloglite_data_file:s0
+/mnt/vendor/enhance(/.*)?                                                                        u:object_r:vendor_sprd_enhance_data_file:s0
+/(data|mnt)/vendor/sprd_ss(/.*)?                                                                 u:object_r:tee_data_file:s0
+/data/vendor/sprd_tee_ss(/.*)?                                                                   u:object_r:tee_data_file:s0
+/data/vendor/gnss(/.*)?                                                                          u:object_r:vendor_sprd_gnss_data_file:s0
+/mnt/vendor/wcn(/.*)?                                                                            u:object_r:vendor_sprd_wcn_data_file:s0
+/mnt/vendor/battery(/.*)?                                                                        u:object_r:vendor_sprd_battery_data_file:s0
+/data/vendor/local/slogmodem(/.*)?                                                               u:object_r:vendor_sprd_modem_data_file:s0
+/dev/socket/wcnd u:object_r:vendor_sprd_wcnd_socket:s0
+/data/vendor/mediadrm(/.*)? u:object_r:vendor_sprd_drm_data_file:s0

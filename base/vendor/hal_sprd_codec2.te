@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_hal_sprd_codec2, domain;
+type vendor_hal_sprd_codec2_tmpfs, file_type;
+type vendor_hal_sprd_codec2_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_sprd_codec2)
+hal_server_domain(vendor_hal_sprd_codec2, hal_codec2)
+tmpfs_domain(vendor_hal_sprd_codec2)
+vndbinder_use(vendor_hal_sprd_codec2)
+allow vendor_hal_sprd_codec2 video_device:chr_file rw_file_perms;
+allow vendor_hal_sprd_codec2 vendor_sprd_jpeg_device:chr_file rw_file_perms;
+allow vendor_hal_sprd_codec2 gpu_device:chr_file rw_file_perms;
+get_prop(vendor_hal_sprd_codec2, vendor_sprd_graphics_prop)

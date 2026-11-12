@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_wcnd_socket, file_type;
+type_transition vendor_sprd_connmgr socket_device:sock_file vendor_sprd_wcnd_socket "wcnd";
+allow vendor_sprd_connmgr vendor_sprd_wcnd_socket:sock_file create_file_perms;

@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+net_domain(hal_radio_default)
+binder_use(hal_radio_default)
+allow hal_radio_default radio_device:chr_file rw_file_perms;
+allow hal_radio_default vendor_sprd_spipe_device:chr_file rw_file_perms;
+set_prop(hal_radio_default, vendor_sprd_radio_prop)
+get_prop(hal_radio_default, vendor_sprd_modem_prop)
