@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# WCN loads its firmware from the vendor/ODM firmware search path.
+r_dir_file(kernel, vendor_sprd_firmware_file)

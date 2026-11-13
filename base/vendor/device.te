@@ -11,4 +11,5 @@ type vendor_sprd_jpeg_device, dev_type;
 type vendor_sprd_diag_device, dev_type;
 type vendor_sprd_miscdata_block_device, dev_type;
 type vendor_sprd_modem_block_device, dev_type;
+type vendor_sprd_modem_nv_block_device, dev_type;
 type vendor_sprd_rpmb_device, dev_type;

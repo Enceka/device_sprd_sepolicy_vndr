@@ -35,6 +35,8 @@ def main():
     parser.add_argument("--android-root", type=Path, default=Path.cwd())
     parser.add_argument("--variant", choices=("user", "userdebug", "eng"), default="user")
     parser.add_argument("--platform", choices=("ums9621",))
+    parser.add_argument("--vendor-policy", type=Path, action="append", default=[],
+                        help="additional vendor policy directory; may be repeated")
     parser.add_argument("--recovery", action="store_true")
     parser.add_argument("--legacy-debugfs", action="store_true",
                         help="also check the pre-Android-12 launch-device branch")
@@ -45,6 +47,10 @@ def main():
     root = args.android_root.resolve()
     repo = Path(__file__).resolve().parents[1]
     policy = root / "system/sepolicy"
+    extra_vendor = list(dict.fromkeys(directory.resolve() for directory in args.vendor_policy))
+    for directory in extra_vendor:
+        if not directory.is_dir():
+            parser.error(f"Vendor policy directory does not exist: {directory}")
     host = root / "out/host/linux-x86/bin"
     m4 = root / "prebuilts/build-tools/linux-x86/bin/m4"
     for tool in (m4, host / "checkpolicy", host / "secilc", host / "checkfc",
@@ -65,6 +71,8 @@ def main():
     if args.variant != "user":
         private.append(repo / "debug/private")
         vendor.append(repo / "debug/vendor")
+    vendor = list(dict.fromkeys([*vendor, *extra_vendor]))
+    checked_vendor = vendor.copy()
     # Include the independent Lineage policy if this is a Lineage checkout.
     lineage = root / "device/lineage/sepolicy/common"
     if lineage.is_dir():
@@ -135,8 +143,12 @@ def main():
         print(f"PASS {name}: syntax and context types", flush=True)
     if args.avc_summary:
         check_captured_transitions(args.avc_summary, output / "file_contexts", cil, args.variant)
-    run([host / "check_prop_prefix", "--property-contexts", repo / "base/vendor/property_contexts",
+    vendor_properties = output / "vendor_property_contexts"
+    run([*flags, *(directory / "property_contexts" for directory in checked_vendor
+                   if (directory / "property_contexts").is_file())], vendor_properties)
+    run([host / "check_prop_prefix", "--property-contexts", vendor_properties,
          "--allowed-property-prefix", "vendor.", "persist.vendor.", "ro.vendor.",
+         "ctl.start$vendor.", "ctl.stop$vendor.", "ctl.restart$vendor.",
          "--allowed-context-prefix", "vendor_", "--strict"])
     result = subprocess.run([str(host / "sepolicy-analyze"), str(binary), "permissive"],
                             check=True, capture_output=True, text=True)

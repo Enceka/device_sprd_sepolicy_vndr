@@ -10,3 +10,6 @@ set_prop(vendor_init, vendor_sprd_audio_prop)
 set_prop(vendor_init, vendor_sprd_graphics_prop)
 set_prop(vendor_init, vendor_sprd_wcn_prop)
 set_prop(vendor_init, vendor_sprd_log_prop)
+
+allow vendor_init vendor_sprd_proc_swappiness:file w_file_perms;
+allow vendor_init proc_sched:file w_file_perms;

@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+allow hal_wifi_default mnt_vendor_file:dir search;
+allow hal_wifi_default vendor_sprd_wlan_mac_file:file r_file_perms;
+# SPRDWLSETNDEVMAC sets the provisioned MAC after interface creation.
+allowxperm hal_wifi_default self:udp_socket ioctl 0x89f8;
+set_prop(hal_wifi_default, vendor_sprd_wcn_prop)

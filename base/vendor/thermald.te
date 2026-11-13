@@ -4,5 +4,16 @@
 type vendor_sprd_thermald, domain;
 type vendor_sprd_thermald_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_sprd_thermald)
+allow vendor_sprd_thermald self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+r_dir_file(vendor_sprd_thermald, sysfs_batteryinfo)
+allow vendor_sprd_thermald sysfs_batteryinfo:file write;
+r_dir_file(vendor_sprd_thermald, sysfs_leds)
+allow vendor_sprd_thermald sysfs_leds:file write;
+binder_use(vendor_sprd_thermald)
+set_prop(vendor_sprd_thermald, vendor_sprd_power_prop)
+hal_client_domain(vendor_sprd_thermald, hal_telephony)
+allow vendor_sprd_thermald mnt_vendor_file:dir { search write add_name remove_name };
+allow vendor_sprd_thermald vendor_sprd_thermal_data_file:file create_file_perms;
+type_transition vendor_sprd_thermald mnt_vendor_file:file vendor_sprd_thermal_data_file "thermalSensorsConfig.xml";
 r_dir_file(vendor_sprd_thermald, sysfs_thermal)
 allow vendor_sprd_thermald sysfs_thermal:file write;

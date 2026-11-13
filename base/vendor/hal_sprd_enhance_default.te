@@ -7,6 +7,8 @@ init_daemon_domain(vendor_hal_sprd_enhance_default)
 hal_server_domain(vendor_hal_sprd_enhance_default, hal_sprd_enhance)
 binder_use(vendor_hal_sprd_enhance_default)
 hwbinder_use(vendor_hal_sprd_enhance_default)
+allow vendor_hal_sprd_enhance_default mnt_vendor_file:dir search;
+allow vendor_hal_sprd_enhance_default vendor_sprd_enhance_data_file:file setattr;
 allow vendor_hal_sprd_enhance_default vendor_sprd_sysfs_display:dir search;
 allow vendor_hal_sprd_enhance_default vendor_sprd_sysfs_display:file rw_file_perms;
 r_dir_file(vendor_hal_sprd_enhance_default, vendor_sprd_sysfs_panel)

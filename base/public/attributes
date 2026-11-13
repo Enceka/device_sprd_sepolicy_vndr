@@ -1,11 +1,58 @@
 # SPDX-FileCopyrightText: 2026 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 
-hal_attribute(sprd_enhance)
-hal_attribute(sprd_wcn)
-hal_attribute(sprd_trusty)
-hal_attribute(sprd_network)
-hal_attribute(sprd_log)
-hal_attribute(sprd_cplog)
-hal_attribute(sprd_tui)
-hal_attribute(sprd_soter)
+attribute hal_sprd_enhance;
+expandattribute hal_sprd_enhance true;
+attribute hal_sprd_enhance_client;
+expandattribute hal_sprd_enhance_client true;
+attribute hal_sprd_enhance_server;
+expandattribute hal_sprd_enhance_server false;
+
+attribute hal_sprd_wcn;
+expandattribute hal_sprd_wcn true;
+attribute hal_sprd_wcn_client;
+expandattribute hal_sprd_wcn_client true;
+attribute hal_sprd_wcn_server;
+expandattribute hal_sprd_wcn_server false;
+
+attribute hal_sprd_trusty;
+expandattribute hal_sprd_trusty true;
+attribute hal_sprd_trusty_client;
+expandattribute hal_sprd_trusty_client true;
+attribute hal_sprd_trusty_server;
+expandattribute hal_sprd_trusty_server false;
+
+attribute hal_sprd_network;
+expandattribute hal_sprd_network true;
+attribute hal_sprd_network_client;
+expandattribute hal_sprd_network_client true;
+attribute hal_sprd_network_server;
+expandattribute hal_sprd_network_server false;
+
+attribute hal_sprd_log;
+expandattribute hal_sprd_log true;
+attribute hal_sprd_log_client;
+expandattribute hal_sprd_log_client true;
+attribute hal_sprd_log_server;
+expandattribute hal_sprd_log_server false;
+
+attribute hal_sprd_cplog;
+expandattribute hal_sprd_cplog true;
+attribute hal_sprd_cplog_client;
+expandattribute hal_sprd_cplog_client true;
+attribute hal_sprd_cplog_server;
+expandattribute hal_sprd_cplog_server false;
+
+attribute hal_sprd_tui;
+expandattribute hal_sprd_tui true;
+attribute hal_sprd_tui_client;
+expandattribute hal_sprd_tui_client true;
+attribute hal_sprd_tui_server;
+expandattribute hal_sprd_tui_server false;
+
+attribute hal_sprd_soter;
+expandattribute hal_sprd_soter true;
+attribute hal_sprd_soter_client;
+expandattribute hal_sprd_soter_client true;
+attribute hal_sprd_soter_server;
+expandattribute hal_sprd_soter_server false;

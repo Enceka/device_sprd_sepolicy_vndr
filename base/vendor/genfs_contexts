@@ -1,9 +1,24 @@
 # SPDX-FileCopyrightText: 2026 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 
+# DMA buffers have a separate pseudo-filesystem in the 5.15 source kernel.
+genfscon dmabuf / u:object_r:vendor_sprd_dmabuf:s0
 genfscon proc /sys/walt u:object_r:vendor_sprd_proc_walt:s0
+genfscon proc /sys/vm/swappiness u:object_r:vendor_sprd_proc_swappiness:s0
+genfscon proc /sys/unisoc_mm/direct_swappiness u:object_r:vendor_sprd_proc_swappiness:s0
+genfscon proc /irq u:object_r:vendor_sprd_proc_irq:s0
+genfscon sysfs /devices/platform/sipc-virt u:object_r:vendor_sprd_sysfs_sipc:s0
+genfscon sysfs /firmware/devicetree/base/sipc-virt u:object_r:vendor_sprd_sysfs_sipc:s0
+genfscon sysfs /devices/virtual/misc/gnss_common_ctl u:object_r:vendor_sprd_sysfs_wcn:s0
+genfscon sysfs /devices/virtual/misc/wcn/devices u:object_r:vendor_sprd_sysfs_wcn:s0
+genfscon sysfs /devices/platform/extcon-gpio/extcon u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/charger-manager/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/backlight/backlight u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/backlight/display/backlight/max_brightness u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/sprd_backlight/backlight u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd-governor u:object_r:vendor_sprd_sysfs_scene:s0
 genfscon debugfs /mali0 u:object_r:vendor_sprd_debugfs_mali:s0
+genfscon sysfs /devices/virtual/misc/sprd_sensor/camera_sensor_name u:object_r:vendor_sprd_sysfs_camera:s0
+genfscon sysfs /devices/virtual/misc/sprd_flash/test u:object_r:vendor_sprd_sysfs_camera:s0
+genfscon sysfs /devices/platform/isp-dvfs/devfreq/isp-dvfs/isp_governor/set_work_freq u:object_r:vendor_sprd_sysfs_camera_dvfs:s0
+genfscon sysfs /devices/platform/dcam-if-dvfs/devfreq/dcam-if-dvfs/dcam-if_governor/set_work_freq u:object_r:vendor_sprd_sysfs_camera_dvfs:s0

@@ -58,15 +58,36 @@
 /dev/fm                                                                                          u:object_r:vendor_sprd_fm_device:s0
 /dev/(sprd_vsp|vpu_enc[0-9]+|vdma)                                                               u:object_r:video_device:s0
 /dev/sprd_jpg                                                                                    u:object_r:vendor_sprd_jpeg_device:s0
+/dev/sprd_(image|sensor|cpp|flash)                                                               u:object_r:camera_device:s0
+/dev/sprd_time_sync                                                                              u:object_r:vendor_sprd_spipe_device:s0
+/dev/audio_dsp_log                                                                               u:object_r:vendor_sprd_diag_device:s0
+/dev/ttyGS[0-9]+                                                                                 u:object_r:serial_device:s0
+/(vendor|system/vendor)/usr                                                                      u:object_r:vendor_configs_file:s0
+/(vendor|system/vendor)/usr/keylayout                                                             u:object_r:vendor_keylayout_file:s0
+/(vendor|system/vendor)/usr/keychars                                                              u:object_r:vendor_keychars_file:s0
+/(vendor|system/vendor)/usr/idc                                                                   u:object_r:vendor_idc_file:s0
+/(vendor|system/vendor)/lib(64)?/hw/android\.hardware\.graphics\.mapper@4\.0-impl-arm\.so       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/arm\.graphics-V[123]-ndk(_platform)?\.so                       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libdrm\.so                                                      u:object_r:same_process_hal_file:s0
+/data/vendor/cameraserver(/.*)?                                                                 u:object_r:vendor_sprd_camera_data_file:s0
+/mnt/vendor/productinfo                                                                         u:object_r:vendor_sprd_productinfo_file:s0
+/mnt/vendor/productinfo/otpdata(/.*)?                                                           u:object_r:vendor_sprd_camera_calibration_file:s0
+/mnt/vendor/productinfo/camera_flash_calibration_id_[0-9]+                                      u:object_r:vendor_sprd_camera_calibration_file:s0
+/mnt/vendor/productinfo/sensor_calibration_data(/.*)?                                            u:object_r:vendor_sprd_sensor_calibration_file:s0
+/mnt/vendor/wifimac\.txt                                                                        u:object_r:vendor_sprd_wlan_mac_file:s0
+/mnt/vendor/btmac\.txt                                                                          u:object_r:vendor_sprd_bt_mac_file:s0
+/dev/block/zram[0-9]+                                                                           u:object_r:swap_block_device:s0
 /dev/gsp                                                                                         u:object_r:graphics_device:s0
 /dev/(sdiag_nr|slog_(w|nr|pm|ch|lte|phy)|iq_mem|wcn_gnss_dump)                                   u:object_r:vendor_sprd_diag_device:s0
 /dev/(block/)?mmcblk[0-9]+rpmb                                                                  u:object_r:vendor_sprd_rpmb_device:s0
 /dev/rpmb[0-9]+                                                                                  u:object_r:vendor_sprd_rpmb_device:s0
-/dev/block/(by-name|platform/.+/by-name)/misc u:object_r:misc_block_device:s0
-/dev/block/(by-name|platform/.+/by-name)/miscdata u:object_r:vendor_sprd_miscdata_block_device:s0
-/dev/block/(by-name|platform/.+/by-name)/(nr_(modem|phy|fixnv[12]|runtimenv[12]|deltanv)|pm_sys|ch_sys|l_agdsp)(_[ab])? u:object_r:vendor_sprd_modem_block_device:s0
+/dev/block/(by-name|platform/.+/by-name)/misc -b u:object_r:misc_block_device:s0
+/dev/block/(by-name|platform/.+/by-name)/miscdata -b u:object_r:vendor_sprd_miscdata_block_device:s0
+/dev/block/(by-name|platform/.+/by-name)/(nr_(modem|phy)|pm_sys|ch_sys|l_agdsp)(_[ab])? -b u:object_r:vendor_sprd_modem_block_device:s0
+/dev/block/(by-name|platform/.+/by-name)/nr_(fixnv[12]|runtimenv[12]|deltanv)(_[ab])? -b u:object_r:vendor_sprd_modem_nv_block_device:s0
 
 # Persistent vendor state and dedicated vendor mount points.
+/(vendor|odm)/firmware(/.*)?                                                                      u:object_r:vendor_sprd_firmware_file:s0
 /data/vendor/ylog(/.*)?                                                                          u:object_r:vendor_yloglite_data_file:s0
 /mnt/vendor/enhance(/.*)?                                                                        u:object_r:vendor_sprd_enhance_data_file:s0
 /(data|mnt)/vendor/sprd_ss(/.*)?                                                                 u:object_r:tee_data_file:s0
@@ -74,6 +95,7 @@
 /data/vendor/gnss(/.*)?                                                                          u:object_r:vendor_sprd_gnss_data_file:s0
 /mnt/vendor/wcn(/.*)?                                                                            u:object_r:vendor_sprd_wcn_data_file:s0
 /mnt/vendor/battery(/.*)?                                                                        u:object_r:vendor_sprd_battery_data_file:s0
+/mnt/vendor/thermalSensorsConfig\.xml                                                          u:object_r:vendor_sprd_thermal_data_file:s0
 /data/vendor/local/slogmodem(/.*)?                                                               u:object_r:vendor_sprd_modem_data_file:s0
 /dev/socket/wcnd u:object_r:vendor_sprd_wcnd_socket:s0
 /data/vendor/mediadrm(/.*)? u:object_r:vendor_sprd_drm_data_file:s0

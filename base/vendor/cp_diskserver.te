@@ -4,6 +4,10 @@
 type vendor_sprd_cp_diskserver, domain;
 type vendor_sprd_cp_diskserver_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_sprd_cp_diskserver)
+wakelock_use(vendor_sprd_cp_diskserver)
+allow vendor_sprd_cp_diskserver { proc_cmdline proc_bootconfig }:file r_file_perms;
+get_prop(vendor_sprd_cp_diskserver, vendor_sprd_radio_prop)
+get_prop(vendor_sprd_cp_diskserver, vendor_sprd_modem_prop)
 allow vendor_sprd_cp_diskserver vendor_sprd_spipe_device:chr_file rw_file_perms;
 allow vendor_sprd_cp_diskserver block_device:dir search;
-allow vendor_sprd_cp_diskserver vendor_sprd_modem_block_device:blk_file rw_file_perms;
+allow vendor_sprd_cp_diskserver vendor_sprd_modem_nv_block_device:blk_file rw_file_perms;

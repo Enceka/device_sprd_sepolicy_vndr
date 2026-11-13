@@ -1,11 +1,7 @@
 # SPDX-FileCopyrightText: 2026 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 
-# Respect the Android 12+ launch-device debugfs restriction.
-no_debugfs_restriction(`
-    allow hal_memtrack_default debugfs:dir search;
-    r_dir_file(hal_memtrack_default, vendor_sprd_debugfs_mali)
-')
+allow hal_memtrack_default vendor_sprd_sysfs_gpu_memory:file r_file_perms;
 allow hal_memtrack_default sysfs:dir r_dir_perms;
 allow hal_memtrack_default sysfs:lnk_file read;
 allow hal_memtrack_default sysfs_gpu:dir r_dir_perms;

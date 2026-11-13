@@ -2,5 +2,26 @@
 # SPDX-License-Identifier: Apache-2.0
 
 vndbinder_use(hal_camera_default)
-get_prop(hal_camera_default, vendor_sprd_camera_prop)
+set_prop(hal_camera_default, vendor_sprd_camera_prop)
 allow hal_camera_default vendor_sprd_jpeg_device:chr_file rw_file_perms;
+allow hal_camera_default vendor_sprd_sysfs_camera:file rw_file_perms;
+hal_client_domain(hal_camera_default, hal_telephony)
+hal_client_domain(hal_camera_default, hal_power)
+hal_client_domain(hal_camera_default, hal_graphics_allocator)
+# BufferQueue returns release fences created by the display composer.
+allow hal_camera_default hal_graphics_composer_server:fd use;
+binder_call(hal_camera_default, system_server)
+get_prop(hal_camera_default, boot_status_prop)
+allow hal_camera_default self:global_capability_class_set sys_nice;
+allow hal_camera_default mnt_vendor_file:dir search;
+allow hal_camera_default vendor_sprd_camera_data_file:dir create_dir_perms;
+allow hal_camera_default vendor_sprd_camera_data_file:file create_file_perms;
+r_dir_file(hal_camera_default, vendor_sprd_sysfs_scene)
+allow hal_camera_default vendor_sprd_sysfs_scene:file write;
+r_dir_file(hal_camera_default, vendor_sprd_sysfs_display)
+r_dir_file(hal_camera_default, vendor_sprd_sysfs_panel)
+r_dir_file(hal_camera_default, vendor_sprd_enhance_data_file)
+allow hal_camera_default proc_meminfo:file r_file_perms;
+allow hal_camera_default vendor_sprd_sysfs_camera_dvfs:file rw_file_perms;
+allow hal_camera_default vendor_sprd_productinfo_file:dir search;
+r_dir_file(hal_camera_default, vendor_sprd_camera_calibration_file)

@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# Emit the hal_attribute() checks with rules, after platform attributes have
+# been expanded, so split-policy base_typeattr identifiers remain stable.
+define(`sprd_hal_attribute_checks', `
+neverallow { hal_$1_server -halserverdomain } domain:process fork;
+build_test_only(`
+neverallow { hal_$1_server -hal_$1 } domain:process fork;
+neverallow { hal_$1_client -halclientdomain } domain:process fork;
+')
+')
+
+sprd_hal_attribute_checks(sprd_enhance)
+sprd_hal_attribute_checks(sprd_wcn)
+sprd_hal_attribute_checks(sprd_trusty)
+sprd_hal_attribute_checks(sprd_network)
+sprd_hal_attribute_checks(sprd_log)
+sprd_hal_attribute_checks(sprd_cplog)
+sprd_hal_attribute_checks(sprd_tui)
+sprd_hal_attribute_checks(sprd_soter)

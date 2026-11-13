@@ -4,5 +4,7 @@
 type vendor_sprd_dcxsrv, domain;
 type vendor_sprd_dcxsrv_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_sprd_dcxsrv)
+allow vendor_sprd_dcxsrv mnt_vendor_file:dir search;
+allow vendor_sprd_dcxsrv vendor_sprd_productinfo_file:dir search;
 
 # Additional diagnostic permissions require captured AVCs in this domain.

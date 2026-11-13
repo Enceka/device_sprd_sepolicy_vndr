@@ -5,4 +5,7 @@ type vendor_sprd_uniber, domain;
 type vendor_sprd_uniber_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_sprd_uniber)
 allow vendor_sprd_uniber proc_interrupts:file r_file_perms;
-# IRQ affinity writes must be labeled individually by the board.
+allow vendor_sprd_uniber proc_stat:file r_file_perms;
+r_dir_file(vendor_sprd_uniber, vendor_sprd_proc_irq)
+allow vendor_sprd_uniber vendor_sprd_proc_irq:file write;
+allow vendor_sprd_uniber kmsg_device:chr_file { open write getattr ioctl };

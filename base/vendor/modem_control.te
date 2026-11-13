@@ -4,8 +4,20 @@
 type vendor_sprd_modem_control, domain;
 type vendor_sprd_modem_control_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_sprd_modem_control)
+wakelock_use(vendor_sprd_modem_control)
+allow vendor_sprd_modem_control self:global_capability_class_set { setuid setgid };
+allow vendor_sprd_modem_control proc_cmdline:file r_file_perms;
+allow vendor_sprd_modem_control vendor_sprd_spipe_device:chr_file rw_file_perms;
+allow vendor_sprd_modem_control radio_device:chr_file rw_file_perms;
+allow vendor_sprd_modem_control tee_device:chr_file rw_file_perms;
+allow vendor_sprd_modem_control vendor_shell_exec:file rx_file_perms;
+get_prop(vendor_sprd_modem_control, vendor_sprd_radio_prop)
+r_dir_file(vendor_sprd_modem_control, vendor_sprd_sysfs_sipc)
+allow vendor_sprd_modem_control vendor_sprd_sysfs_sipa_reset:file w_file_perms;
 allow vendor_sprd_modem_control vendor_sprd_modem_device:chr_file rw_file_perms;
 allow vendor_sprd_modem_control block_device:dir search;
 allow vendor_sprd_modem_control vendor_sprd_modem_block_device:blk_file r_file_perms;
+allow vendor_sprd_modem_control vendor_sprd_modem_nv_block_device:blk_file rw_file_perms;
 allow vendor_sprd_modem_control self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 set_prop(vendor_sprd_modem_control, vendor_sprd_modem_prop)
+set_prop(vendor_sprd_modem_control, vendor_sprd_ctl_cp_diskserver_prop)

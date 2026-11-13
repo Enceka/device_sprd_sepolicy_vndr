@@ -9,3 +9,4 @@ binder_use(vendor_hal_sprd_network_default)
 hwbinder_use(vendor_hal_sprd_network_default)
 # This local network-control HAL uses Binder, not Internet sockets.
 get_prop(vendor_hal_sprd_network_default, vendor_sprd_radio_prop)
+allow vendor_hal_sprd_network_default vendor_sprd_modem_control:unix_stream_socket connectto;

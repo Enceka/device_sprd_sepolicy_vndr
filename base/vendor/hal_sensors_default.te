@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+binder_call(hal_sensors_default, system_server)
+allow hal_sensors_default mnt_vendor_file:dir search;
+allow hal_sensors_default vendor_sprd_productinfo_file:dir search;
+r_dir_file(hal_sensors_default, vendor_sprd_sensor_calibration_file)
