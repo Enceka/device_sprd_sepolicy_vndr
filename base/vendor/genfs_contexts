@@ -4,6 +4,7 @@
 # DMA buffers have a separate pseudo-filesystem in the 5.15 source kernel.
 genfscon dmabuf / u:object_r:vendor_sprd_dmabuf:s0
 genfscon proc /sys/walt u:object_r:vendor_sprd_proc_walt:s0
+genfscon sysfs /kernel/headset/state u:object_r:vendor_sprd_sysfs_headset:s0
 genfscon proc /sys/vm/swappiness u:object_r:vendor_sprd_proc_swappiness:s0
 genfscon proc /sys/unisoc_mm/direct_swappiness u:object_r:vendor_sprd_proc_swappiness:s0
 genfscon proc /irq u:object_r:vendor_sprd_proc_irq:s0

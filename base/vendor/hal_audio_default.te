@@ -2,4 +2,15 @@
 # SPDX-License-Identifier: Apache-2.0
 
 hal_client_domain(hal_audio_default, hal_power)
-get_prop(hal_audio_default, vendor_sprd_audio_prop)
+set_prop(hal_audio_default, vendor_sprd_audio_prop)
+
+allow hal_audio_default vendor_sprd_modem_control:unix_stream_socket connectto;
+allow hal_audio_default vendor_sprd_audio_dsp_log_device:chr_file rw_file_perms;
+allow hal_audio_default mnt_vendor_file:dir search;
+allow hal_audio_default vendor_sprd_audio_data_file:dir create_dir_perms;
+allow hal_audio_default vendor_sprd_audio_data_file:file create_file_perms;
+allow hal_audio_default vendor_sprd_audio_data_file:fifo_file create_file_perms;
+allow hal_audio_default vendor_sprd_sysfs_headset:file r_file_perms;
+
+# AUDIO_PIPE_BUFFERSIZE_SET on /dev/apipe-pcm.
+allowxperm hal_audio_default audio_device:chr_file ioctl 0x4102;

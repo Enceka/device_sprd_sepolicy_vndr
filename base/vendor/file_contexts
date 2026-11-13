@@ -60,7 +60,11 @@
 /dev/sprd_jpg                                                                                    u:object_r:vendor_sprd_jpeg_device:s0
 /dev/sprd_(image|sensor|cpp|flash)                                                               u:object_r:camera_device:s0
 /dev/sprd_time_sync                                                                              u:object_r:vendor_sprd_spipe_device:s0
-/dev/audio_dsp_log                                                                               u:object_r:vendor_sprd_diag_device:s0
+/dev/audio_dsp_log                                                                               u:object_r:vendor_sprd_audio_dsp_log_device:s0
+/dev/apipe-(cmd-in|cmd-out|pcm)                                                                  u:object_r:audio_device:s0
+/dev/vbc_turning[0-9]+                                                                           u:object_r:audio_device:s0
+/data/vendor/local/media(/.*)?                                                                  u:object_r:vendor_sprd_audio_data_file:s0
+/mnt/vendor/audio(/.*)?                                                                         u:object_r:vendor_sprd_audio_data_file:s0
 /dev/ttyGS[0-9]+                                                                                 u:object_r:serial_device:s0
 /(vendor|system/vendor)/usr                                                                      u:object_r:vendor_configs_file:s0
 /(vendor|system/vendor)/usr/keylayout                                                             u:object_r:vendor_keylayout_file:s0

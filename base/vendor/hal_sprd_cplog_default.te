@@ -8,6 +8,7 @@ hal_server_domain(vendor_hal_sprd_cplog_default, hal_sprd_cplog)
 binder_use(vendor_hal_sprd_cplog_default)
 hwbinder_use(vendor_hal_sprd_cplog_default)
 allow vendor_hal_sprd_cplog_default vendor_sprd_diag_device:chr_file rw_file_perms;
+allow vendor_hal_sprd_cplog_default vendor_sprd_audio_dsp_log_device:chr_file rw_file_perms;
 set_prop(vendor_hal_sprd_cplog_default, vendor_sprd_log_prop)
 hal_client_domain(vendor_hal_sprd_cplog_default, hal_gnss)
 allow vendor_hal_sprd_cplog_default vendor_sprd_spipe_device:chr_file rw_file_perms;

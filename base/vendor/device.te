@@ -9,6 +9,7 @@ type vendor_sprd_wcn_device, dev_type;
 type vendor_sprd_fm_device, dev_type;
 type vendor_sprd_jpeg_device, dev_type;
 type vendor_sprd_diag_device, dev_type;
+type vendor_sprd_audio_dsp_log_device, dev_type;
 type vendor_sprd_miscdata_block_device, dev_type;
 type vendor_sprd_modem_block_device, dev_type;
 type vendor_sprd_modem_nv_block_device, dev_type;
