@@ -3,6 +3,7 @@
 
 hal_client_domain(hal_audio_default, hal_power)
 set_prop(hal_audio_default, vendor_sprd_audio_prop)
+get_prop(hal_audio_default, sprd_audio_debug_prop)
 
 allow hal_audio_default vendor_sprd_modem_control:unix_stream_socket connectto;
 allow hal_audio_default vendor_sprd_audio_dsp_log_device:chr_file rw_file_perms;
