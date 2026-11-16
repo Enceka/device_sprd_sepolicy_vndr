@@ -1,0 +1,8 @@
+type sprd_ims_config, domain, coredomain;
+app_domain(sprd_ims_config)
+
+allow sprd_ims_config app_api_service:service_manager find;
+allow sprd_ims_config radio_service:service_manager find;
+get_prop(sprd_ims_config, sprd_ims_approval_prop)
+get_prop(sprd_ims_config, vendor_sprd_radio_prop)
+set_prop(radio, sprd_ims_approval_prop)

@@ -1,3 +1,3 @@
-ro.telephony.sprd_ims             u:object_r:telephony_config_prop:s0 exact bool
+gsm.sys.sim.volte.allowedplmn     u:object_r:sprd_ims_approval_prop:s0 exact string
 persist.audio.device_route_debug u:object_r:sprd_audio_debug_prop:s0 exact string
 persist.audio.reg_diag           u:object_r:sprd_audio_debug_prop:s0 exact string
