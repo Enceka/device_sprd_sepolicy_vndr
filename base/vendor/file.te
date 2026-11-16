@@ -30,6 +30,8 @@ type vendor_sprd_wlan_mac_file, file_type, data_file_type;
 type vendor_sprd_bt_mac_file, file_type, data_file_type;
 type vendor_sprd_bt_data_file, file_type, data_file_type;
 type vendor_sprd_sensor_calibration_file, file_type, data_file_type;
+type vendor_sprd_sysfs_sensorhub, fs_type, sysfs_type;
+type vendor_sprd_sysfs_iio, fs_type, sysfs_type;
 type vendor_sprd_sysfs_block_discard, fs_type, sysfs_type;
 type vendor_sprd_sysfs_sipa_reset, fs_type, sysfs_type;
 type vendor_sprd_proc_swappiness, fs_type, proc_type;

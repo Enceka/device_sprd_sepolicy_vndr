@@ -20,6 +20,9 @@ genfscon sysfs /devices/platform/sprd_backlight/backlight u:object_r:sysfs_leds:
 genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd-governor u:object_r:vendor_sprd_sysfs_scene:s0
 genfscon debugfs /mali0 u:object_r:vendor_sprd_debugfs_mali:s0
 genfscon sysfs /devices/virtual/misc/sprd_sensor/camera_sensor_name u:object_r:vendor_sprd_sysfs_camera:s0
+genfscon sysfs /devices/virtual/sprd_sensorhub u:object_r:vendor_sprd_sysfs_sensorhub:s0
+genfscon sysfs /devices/platform/sensorhub u:object_r:vendor_sprd_sysfs_sensorhub:s0
+genfscon sysfs /bus/iio/devices u:object_r:vendor_sprd_sysfs_iio:s0
 genfscon sysfs /devices/virtual/misc/sprd_flash/test u:object_r:vendor_sprd_sysfs_camera:s0
 genfscon sysfs /devices/platform/isp-dvfs/devfreq/isp-dvfs/isp_governor/set_work_freq u:object_r:vendor_sprd_sysfs_camera_dvfs:s0
 genfscon sysfs /devices/platform/dcam-if-dvfs/devfreq/dcam-if-dvfs/dcam-if_governor/set_work_freq u:object_r:vendor_sprd_sysfs_camera_dvfs:s0
