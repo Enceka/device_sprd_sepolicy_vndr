@@ -12,5 +12,11 @@ allow hal_audio_default vendor_sprd_audio_data_file:file create_file_perms;
 allow hal_audio_default vendor_sprd_audio_data_file:fifo_file create_file_perms;
 allow hal_audio_default vendor_sprd_sysfs_headset:file r_file_perms;
 
-# AUDIO_PIPE_BUFFERSIZE_SET on /dev/apipe-pcm.
-allowxperm hal_audio_default audio_device:chr_file ioctl 0x4102;
+# Keep the pipe ioctl whitelist separate from standard ALSA devices.
+allow hal_audio_default vendor_sprd_audio_pipe_device:chr_file rw_file_perms;
+# AUDIO_PIPE_BUFFERSIZE_SET, MAXRWSIZE_GET and POINT_ALLOC on /dev/apipe-pcm.
+allowxperm hal_audio_default vendor_sprd_audio_pipe_device:chr_file ioctl {
+    0x4102
+    0x4105
+    0x4108
+};
