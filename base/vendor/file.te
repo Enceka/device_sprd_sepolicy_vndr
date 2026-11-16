@@ -28,6 +28,7 @@ type vendor_sprd_dmabuf, fs_type;
 type vendor_sprd_firmware_file, file_type, vendor_file_type;
 type vendor_sprd_wlan_mac_file, file_type, data_file_type;
 type vendor_sprd_bt_mac_file, file_type, data_file_type;
+type vendor_sprd_bt_data_file, file_type, data_file_type;
 type vendor_sprd_sensor_calibration_file, file_type, data_file_type;
 type vendor_sprd_sysfs_block_discard, fs_type, sysfs_type;
 type vendor_sprd_sysfs_sipa_reset, fs_type, sysfs_type;

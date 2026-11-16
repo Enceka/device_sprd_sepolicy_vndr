@@ -53,7 +53,8 @@
 /dev/(tshm|tui_dev)                                                                              u:object_r:tee_device:s0
 /dev/(modem|phycp|pmsys|chsys|mdm_ctrl|cp_dump)                                                  u:object_r:vendor_sprd_modem_device:s0
 /dev/(spipe_(w|nr|lte|wcn)[0-9]+|snv_(nr|lte)|sctl_(pm|ch)|stime_(pm|ch))                        u:object_r:vendor_sprd_spipe_device:s0
-/dev/(stty_(w|nr|td|lte)[0-9]+|ttyBT[0-9]+)                                                      u:object_r:radio_device:s0
+/dev/stty_(w|nr|td|lte)[0-9]+                                                                   u:object_r:radio_device:s0
+/dev/ttyBT[0-9]+                                                                                u:object_r:hci_attach_dev:s0
 /dev/(sttybt[0-9]+|gnss_dbg|gnss_download|gnss_pmnotify_ctl)                                     u:object_r:vendor_sprd_wcn_device:s0
 /dev/fm                                                                                          u:object_r:vendor_sprd_fm_device:s0
 /dev/(sprd_vsp|vpu_enc[0-9]+|vdma)                                                               u:object_r:video_device:s0
@@ -80,6 +81,8 @@
 /mnt/vendor/productinfo/sensor_calibration_data(/.*)?                                            u:object_r:vendor_sprd_sensor_calibration_file:s0
 /mnt/vendor/wifimac\.txt                                                                        u:object_r:vendor_sprd_wlan_mac_file:s0
 /mnt/vendor/btmac\.txt                                                                          u:object_r:vendor_sprd_bt_mac_file:s0
+/data/vendor/bluetooth                                                                          u:object_r:vendor_sprd_bt_data_file:s0
+/data/vendor/bluetooth/btmac\.txt                                                               u:object_r:vendor_sprd_bt_data_file:s0
 /dev/block/zram[0-9]+                                                                           u:object_r:swap_block_device:s0
 /dev/gsp                                                                                         u:object_r:graphics_device:s0
 /dev/(sdiag_nr|slog_(w|nr|pm|ch|lte|phy)|iq_mem|wcn_gnss_dump)                                   u:object_r:vendor_sprd_diag_device:s0

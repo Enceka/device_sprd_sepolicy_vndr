@@ -8,3 +8,5 @@ allow hal_bluetooth_default vendor_sprd_connmgr:unix_stream_socket connectto;
 get_prop(hal_bluetooth_default, vendor_sprd_wcn_prop)
 allow hal_bluetooth_default mnt_vendor_file:dir search;
 allow hal_bluetooth_default vendor_sprd_bt_mac_file:file r_file_perms;
+allow hal_bluetooth_default vendor_sprd_bt_data_file:dir rw_dir_perms;
+allow hal_bluetooth_default vendor_sprd_bt_data_file:file create_file_perms;
