@@ -5,6 +5,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.lights-service                            u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.memtrack-service\.sprd                         u:object_r:hal_memtrack_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.memtrack-service                          u:object_r:hal_memtrack_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb-service\.sprd                               u:object_r:hal_usb_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.unisoc\.hardware\.power-service                           u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.power@4\.0-service                        u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.sprd\.hardware\.boot@1\.2-service                         u:object_r:hal_bootctl_default_exec:s0
