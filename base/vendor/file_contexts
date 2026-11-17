@@ -90,7 +90,8 @@
 /dev/rpmb[0-9]+                                                                                  u:object_r:vendor_sprd_rpmb_device:s0
 /dev/block/(by-name|platform/.+/by-name)/misc -b u:object_r:misc_block_device:s0
 /dev/block/(by-name|platform/.+/by-name)/miscdata -b u:object_r:vendor_sprd_miscdata_block_device:s0
-/dev/block/(by-name|platform/.+/by-name)/(nr_(modem|phy)|pm_sys|ch_sys|l_agdsp)(_[ab])? -b u:object_r:vendor_sprd_modem_block_device:s0
+/dev/block/(by-name|platform/.+/by-name)/(nr_(modem|phy)|pm_sys|ch_sys)(_[ab])? -b u:object_r:vendor_sprd_modem_block_device:s0
+/dev/block/(by-name|platform/.+/by-name)/l_agdsp(_[ab])? -b u:object_r:vendor_sprd_audio_dsp_block_device:s0
 /dev/block/(by-name|platform/.+/by-name)/nr_(fixnv[12]|runtimenv[12]|deltanv)(_[ab])? -b u:object_r:vendor_sprd_modem_nv_block_device:s0
 
 # Persistent vendor state and dedicated vendor mount points.

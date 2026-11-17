@@ -12,6 +12,10 @@ allow hal_audio_default vendor_sprd_audio_data_file:dir create_dir_perms;
 allow hal_audio_default vendor_sprd_audio_data_file:file create_file_perms;
 allow hal_audio_default vendor_sprd_audio_data_file:fifo_file create_file_perms;
 allow hal_audio_default vendor_sprd_sysfs_headset:file r_file_perms;
+allow hal_audio_default vendor_sprd_sysfs_audiocp_ldinfo:file { open read };
+allow hal_audio_default vendor_sprd_sysfs_audiocp_control:file { open write };
+allow hal_audio_default block_device:dir search;
+allow hal_audio_default vendor_sprd_audio_dsp_block_device:blk_file { open read };
 
 # Keep the pipe ioctl whitelist separate from standard ALSA devices.
 allow hal_audio_default vendor_sprd_audio_pipe_device:chr_file rw_file_perms;

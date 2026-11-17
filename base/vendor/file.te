@@ -37,3 +37,5 @@ type vendor_sprd_sysfs_sipa_reset, fs_type, sysfs_type;
 type vendor_sprd_proc_swappiness, fs_type, proc_type;
 type vendor_sprd_audio_data_file, file_type, data_file_type;
 type vendor_sprd_sysfs_headset, fs_type, sysfs_type;
+type vendor_sprd_sysfs_audiocp_ldinfo, fs_type, sysfs_type;
+type vendor_sprd_sysfs_audiocp_control, fs_type, sysfs_type;

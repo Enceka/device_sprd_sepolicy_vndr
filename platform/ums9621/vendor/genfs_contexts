@@ -2,6 +2,10 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # UMS9621 / Qogirn6L sysfs paths; partition numbers belong in device policy.
+genfscon sysfs /devices/platform/audiocp_boot/ldinfo u:object_r:vendor_sprd_sysfs_audiocp_ldinfo:s0
+genfscon sysfs /devices/platform/audiocp_boot/stop u:object_r:vendor_sprd_sysfs_audiocp_control:s0
+genfscon sysfs /devices/platform/audiocp_boot/agdsp u:object_r:vendor_sprd_sysfs_audiocp_control:s0
+genfscon sysfs /devices/platform/audiocp_boot/start u:object_r:vendor_sprd_sysfs_audiocp_control:s0
 genfscon sysfs /devices/platform/soc/soc:dpuvsp/31000000.dpu/display/dispc0 u:object_r:vendor_sprd_sysfs_display:s0
 genfscon sysfs /devices/platform/soc/soc:dpuvsp/31300000.dsi/31300000.dsi.0/display/panel0 u:object_r:vendor_sprd_sysfs_panel:s0
 genfscon sysfs /devices/platform/soc/soc:mm/23140000.gpu/gpu_memory u:object_r:vendor_sprd_sysfs_gpu_memory:s0
