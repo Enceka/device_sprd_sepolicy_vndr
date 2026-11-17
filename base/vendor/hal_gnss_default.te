@@ -11,6 +11,7 @@ allow hal_gnss_default vendor_sprd_connmgr:unix_stream_socket connectto;
 get_prop(hal_gnss_default, vendor_sprd_wcn_prop)
 allow hal_gnss_default mnt_vendor_file:dir search;
 r_dir_file(hal_gnss_default, vendor_sprd_sysfs_wcn)
+allow hal_gnss_default vendor_sprd_sysfs_gnss_control:file rw_file_perms;
 r_dir_file(hal_gnss_default, sysfs_leds)
 get_prop(hal_gnss_default, vendor_sprd_modem_prop)
 get_prop(hal_gnss_default, vendor_sprd_radio_prop)

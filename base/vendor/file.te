@@ -17,6 +17,7 @@ type vendor_sprd_sysfs_gpu_memory, fs_type, sysfs_type;
 type vendor_sprd_sysfs_camera, fs_type, sysfs_type;
 type vendor_sprd_sysfs_sipc, fs_type, sysfs_type;
 type vendor_sprd_sysfs_wcn, fs_type, sysfs_type;
+type vendor_sprd_sysfs_gnss_control, fs_type, sysfs_type;
 type vendor_sprd_sysfs_dphy_ssc, fs_type, sysfs_type;
 type vendor_sprd_thermal_data_file, file_type, data_file_type;
 type vendor_sprd_proc_irq, fs_type, proc_type;

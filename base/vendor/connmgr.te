@@ -8,6 +8,7 @@ allow vendor_sprd_connmgr self:netlink_kobject_uevent_socket create_socket_perms
 get_prop(vendor_sprd_connmgr, vendor_sprd_radio_prop)
 r_dir_file(vendor_sprd_connmgr, vendor_sprd_sysfs_wcn)
 allow vendor_sprd_connmgr vendor_sprd_sysfs_wcn:file write;
+allow vendor_sprd_connmgr vendor_sprd_sysfs_gnss_control:file rw_file_perms;
 allow vendor_sprd_connmgr mnt_vendor_file:dir search;
 allow vendor_sprd_connmgr vendor_sprd_wcn_device:chr_file rw_file_perms;
 allow vendor_sprd_connmgr self:unix_stream_socket create_stream_socket_perms;

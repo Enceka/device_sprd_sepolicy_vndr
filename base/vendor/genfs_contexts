@@ -11,6 +11,9 @@ genfscon proc /irq u:object_r:vendor_sprd_proc_irq:s0
 genfscon sysfs /devices/platform/sipc-virt u:object_r:vendor_sprd_sysfs_sipc:s0
 genfscon sysfs /firmware/devicetree/base/sipc-virt u:object_r:vendor_sprd_sysfs_sipc:s0
 genfscon sysfs /devices/virtual/misc/gnss_common_ctl u:object_r:vendor_sprd_sysfs_wcn:s0
+genfscon sysfs /devices/virtual/misc/gnss_common_ctl/gnss_power_enable u:object_r:vendor_sprd_sysfs_gnss_control:s0
+genfscon sysfs /devices/virtual/misc/gnss_common_ctl/gnss_subsys u:object_r:vendor_sprd_sysfs_gnss_control:s0
+genfscon sysfs /devices/virtual/misc/gnss_common_ctl/gnss_dump u:object_r:vendor_sprd_sysfs_gnss_control:s0
 genfscon sysfs /devices/virtual/misc/wcn/devices u:object_r:vendor_sprd_sysfs_wcn:s0
 genfscon sysfs /devices/platform/extcon-gpio/extcon u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/charger-manager/power_supply u:object_r:sysfs_batteryinfo:s0
