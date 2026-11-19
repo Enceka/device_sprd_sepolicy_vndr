@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+type vendor_sprd_sysfs_cpufreq_control, fs_type, sysfs_type;
+
+# Preserve reads for regular domains after relabeling the control files.
+allow { domain -isolated_app } vendor_sprd_sysfs_cpufreq_control:file r_file_perms;
+allow hal_power_default vendor_sprd_sysfs_cpufreq_control:file write;
