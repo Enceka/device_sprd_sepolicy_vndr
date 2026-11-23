@@ -4,3 +4,6 @@
 vendor_internal_prop(vendor_sprd_modules_ready_prop)
 vendor_internal_prop(vendor_sprd_modem_prop)
 vendor_internal_prop(vendor_sprd_ctl_cp_diskserver_prop)
+
+# Mali userspace drivers read these in every process that uses the GPU.
+vendor_public_prop(vendor_sprd_mali_prop)

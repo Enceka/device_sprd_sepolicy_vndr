@@ -28,9 +28,9 @@ vendor.audio.                      u:object_r:vendor_sprd_audio_prop:s0 prefix s
 ro.vendor.af.                      u:object_r:vendor_sprd_audio_prop:s0 prefix string
 ro.vendor.qti.va_aosp.support       u:object_r:vendor_sprd_audio_prop:s0 exact bool
 vendor.hwc.                        u:object_r:vendor_sprd_graphics_prop:s0 prefix string
-vendor.mali.                       u:object_r:vendor_sprd_graphics_prop:s0 prefix string
+vendor.mali.                       u:object_r:vendor_sprd_mali_prop:s0 prefix string
 ro.vendor.gpu.                     u:object_r:vendor_sprd_graphics_prop:s0 prefix string
-ro.vendor.arm.                     u:object_r:vendor_sprd_graphics_prop:s0 prefix string
+ro.vendor.arm.                     u:object_r:vendor_sprd_mali_prop:s0 prefix string
 ro.vendor.sf.                      u:object_r:vendor_sprd_graphics_prop:s0 prefix string
 ro.vendor.hwui.                    u:object_r:vendor_sprd_graphics_prop:s0 prefix string
 vendor.bluetooth.                  u:object_r:vendor_sprd_wcn_prop:s0 prefix string

@@ -8,6 +8,7 @@ set_prop(vendor_init, vendor_sprd_power_prop)
 set_prop(vendor_init, vendor_sprd_camera_prop)
 set_prop(vendor_init, vendor_sprd_audio_prop)
 set_prop(vendor_init, vendor_sprd_graphics_prop)
+set_prop(vendor_init, vendor_sprd_mali_prop)
 set_prop(vendor_init, vendor_sprd_wcn_prop)
 set_prop(vendor_init, vendor_sprd_log_prop)
 

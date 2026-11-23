@@ -12,7 +12,6 @@ type vendor_sprd_sysfs_panel, fs_type, sysfs_type;
 type vendor_sprd_sysfs_scene, fs_type, sysfs_type;
 type vendor_sprd_sysfs_cpuidle, fs_type, sysfs_type;
 type vendor_sprd_proc_walt, fs_type, proc_type;
-type vendor_sprd_debugfs_mali, debugfs_type, fs_type;
 type vendor_sprd_sysfs_gpu_memory, fs_type, sysfs_type;
 type vendor_sprd_sysfs_camera, fs_type, sysfs_type;
 type vendor_sprd_sysfs_sipc, fs_type, sysfs_type;

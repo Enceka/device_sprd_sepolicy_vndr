@@ -21,7 +21,6 @@ genfscon sysfs /devices/platform/backlight/backlight u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/backlight/display/backlight/max_brightness u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/sprd_backlight/backlight u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd-governor u:object_r:vendor_sprd_sysfs_scene:s0
-genfscon debugfs /mali0 u:object_r:vendor_sprd_debugfs_mali:s0
 genfscon sysfs /devices/virtual/misc/sprd_sensor/camera_sensor_name u:object_r:vendor_sprd_sysfs_camera:s0
 genfscon sysfs /devices/virtual/sprd_sensorhub u:object_r:vendor_sprd_sysfs_sensorhub:s0
 genfscon sysfs /devices/platform/sensorhub u:object_r:vendor_sprd_sysfs_sensorhub:s0
